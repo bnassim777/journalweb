@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "alphaSlabOne";
+    src: url("../AlfaSlabOne-Regular.ttf")
+}
+
+body {
+
+    .clear {
+        clear: both;
+    }
+
+    font-family: "alphaSlabOne";
+    color: black;
+    background-image:url(../img/fond.webp);
+
+    #logo>img {
+
+        width: 10rem;
+        height: auto;
+        opacity: 40%;
+    }
+
+    #title-flex {
+        font-weight: bold;
+        text-align: center;
+
+        #web {
+            color: rosybrown;
+        }
+
+        h2 {
+            color: white;
+            background-color: black;
+            border-radius: 3px;
+        }
+
+        #date_du_jour {
+            color: rosybrown;
+        }
+    }
+
+
+
+}
+
+body>span:nth-child(1) {
+    float: right;
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+
+    .card {
+        width: 27rem;
+        border: black 1px solid;
+        box-shadow: 2px 10px 15px #000000;
+
+        h3 {
+            background-color: black;
+            color: white;
+            border-radius: 5rem;
+            text-align: center;
+        }
+
+
+        p {
+            text-align: justify;
+            margin: 10px;
+            color: grey;
+
+
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            float: right;
+        }
+
+        .text-box {
+            background-color: red;
+            color: white;
+        }
+    }
+
+
+
+
+}
+
+.box {
+    float: left;
+    border: white 1.5px solid;
+
+}
