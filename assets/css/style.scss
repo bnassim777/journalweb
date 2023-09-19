@@ -3,6 +3,36 @@
     src: url("../AlfaSlabOne-Regular.ttf")
 }
 
+@mixin arrow($color , $size , $orientation ) {
+    width: 0;
+    height: 0;
+
+    @if $orientation ==top {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+    }
+
+    @else if $orientation ==right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+    }
+
+    @else if $orientation ==down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+    }
+
+    @else {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+    }
+}
+
+
 body {
 
     .clear {
@@ -12,9 +42,10 @@ body {
     font-family: "alphaSlabOne";
     color: black;
     background-image:url(../img/fond.webp);
+    font-size: 15px;
 
     #logo>img {
-
+        float: left;
         width: 10rem;
         height: auto;
         opacity: 40%;
@@ -22,7 +53,8 @@ body {
 
     #title-flex {
         font-weight: bold;
-        text-align: center;
+        margin-left: 180px;
+
 
         #web {
             color: rosybrown;
@@ -71,16 +103,28 @@ body>span:nth-child(1) {
 
         p {
             text-align: justify;
-            margin: 10px;
+            margin: 0.5rem;
             color: grey;
 
 
         }
 
+
         button {
             background-color: black;
             color: white;
             float: right;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+
+            #triangle {
+                @include arrow(white, 5px, down);
+                position: relative;
+                float: right;
+                margin-top: 0.3rem;
+            }
         }
 
         .text-box {
@@ -97,5 +141,6 @@ body>span:nth-child(1) {
 .box {
     float: left;
     border: white 1.5px solid;
+    margin-right: 1rem;
 
 }
