@@ -43,9 +43,10 @@ body > span:nth-child(1) {
 .container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .container .card {
-  width: 27rem;
+  width: 27vw;
   border: black 1px solid;
   box-shadow: 2px 10px 15px #000000;
 }
@@ -64,10 +65,11 @@ body > span:nth-child(1) {
   background-color: black;
   color: white;
   float: right;
-  margin-bottom: 1rem;
+  margin: 1rem;
   border-radius: 5px;
   width: 30%;
   text-align: center;
+  font-family: "alphaSlabOne";
 }
 .container .card button #triangle {
   width: 0;
@@ -75,13 +77,17 @@ body > span:nth-child(1) {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid white;
-  position: relative;
-  float: right;
-  margin-top: 0.3rem;
+  display: inline-block;
 }
 .container .card .text-box {
   background-color: red;
   color: white;
+  text-align: center;
+}
+@media only screen and (max-width: 480px) {
+  .container .card {
+    width: 90vw;
+  }
 }
 
 .box {
